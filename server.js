@@ -67,9 +67,9 @@ mongoose.connection.on('disconnected', function () {
 if(process.env.NODE_ENV==='production')
 {
   //set static folder
-  app.use(express.static('shopping-site-backend/build'));
+  app.use(express.static('ecommerce-node/build'));
   app.get('*',(req,res)=>{
-      res.sendFile(path.resolve(__dirname,'Shopping-site-backend','build','index.html'))
+      res.sendFile(path.resolve(__dirname,'ecommerce-node','build','index.html'))
   })
 }
 
